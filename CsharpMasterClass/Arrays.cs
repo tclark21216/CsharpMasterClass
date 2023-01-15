@@ -44,6 +44,7 @@ namespace CsharpMasterClass
             for (int i = 1; i < oddNumbers.Length; i++)
             {
                 if( oddNumbers[i] % 3 == 0)
+
              
                 
                     Console.WriteLine(oddNumbers[i]);
