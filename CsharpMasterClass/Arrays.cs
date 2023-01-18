@@ -38,39 +38,33 @@ namespace CsharpMasterClass
 
         }
 
-        public static void GetOdd(int [] oddNumbers)
+        public static void GetOdd(int [] Array)
         {
-            
-            for (int i = 1; i < oddNumbers.Length; i++)
+
+            for (int i = 0; i < Array.Length; i++)
             {
-                if( oddNumbers[i] % 3 == 0)
-
-             
-                
-                    Console.WriteLine(oddNumbers[i]);
-                
-            }
-
-           
-        }
-
-        public static void GetEven(int[] evenNumbers) {
-            
-            for (int i = 0; i < evenNumbers.Length; i++)
-            {
-                
-                if (evenNumbers[i] % 2 == 0)
+                if (Array[i] % 2 != 0)
                 {
-                    Console.WriteLine(evenNumbers[i]);
+                    Console.WriteLine(Array[i]);
                 }
+            }
 
-                                
-            }
-                
-               
-            }
+
         }
 
+        public static void GetEven(int [] Array) {
+
+            for (int i = 0; i < Array.Length; i++)
+            {
+                if (Array[i] % 2 == 0)
+                {
+                    Console.WriteLine(Array[i]);
+                }
+            }
+
+
+        }
+   }
 
     }
 

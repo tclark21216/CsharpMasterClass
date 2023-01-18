@@ -27,9 +27,12 @@ namespace CsharpMasterClass
 
             //    Console.WriteLine("Central value is {0}", array2D[1,1]);
             //     Console.WriteLine("First value in the third row is: {0}", array2D[2,0]);
-            int[]  numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            Arrays.GetOdd(numbers);
+
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
             Arrays.GetEven(numbers);
+            Arrays.GetOdd(numbers);
+            
             Console.ReadKey();
         }
     }
