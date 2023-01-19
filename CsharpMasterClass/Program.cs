@@ -27,12 +27,25 @@ namespace CsharpMasterClass
 
             //    Console.WriteLine("Central value is {0}", array2D[1,1]);
             //     Console.WriteLine("First value in the third row is: {0}", array2D[2,0]);
+            #region Arrays
+            //int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //Arrays.GetEven(numbers);
+            //Arrays.GetOdd(numbers);
+            #endregion
 
-            Arrays.GetEven(numbers);
-            Arrays.GetOdd(numbers);
-            
+            #region 2 input values program
+
+            Console.WriteLine("Enter a value and I will tell you what type of value it is:");
+
+            string answer = Console.ReadLine();
+
+
+
+
+
+            #endregion
+
             Console.ReadKey();
         }
     }
