@@ -8,47 +8,71 @@ namespace CsharpMasterClass
 {
    public class ForEachLoopsAndSwitch
     {
-        public string value1  { get; set; }
-        public string value2 { get; set; }
+        private static string value1  { get; set; }
+        private static string value2 { get; set; }
 
 
-        public string GetInputValue()
+        public static string GetInputValue()
         {
         Console.WriteLine("Enter a value and I will tell you what type of value it is:");
-            value1 = Console.ReadLine();
+           value1 = Console.ReadLine();
             Console.WriteLine("What input type did you provide? " + "\n" + "Press 1 for String " + "\n" + "Press 2 for integer" + "\n" + "Press 3 for boolean");
             value2 = Console.ReadLine();
 
             switch (value2)
             {
                 case "1":
-                    Console.WriteLine("You entered a value: {0}", value1);
+                    IsAnswerAStringBoolOrInteger(value1);
+                    Console.WriteLine("You entered a string");
                     break;
                 case "2":
-                    Console.WriteLine("You entered a value: {0}", value1);
+                    IsAnswerAStringBoolOrInteger(value1);
+                    Console.WriteLine("You entered an integer");
                     break;
                 case "3":
-                    Console.WriteLine("You entered a value: {0}", value1);
+                    IsAnswerAStringBoolOrInteger(value1);
+                    Console.WriteLine("You entered a boolean value");
                     break;
                 default:
-                    Console.WriteLine("You entered an invalid number");
+                    Console.WriteLine("You entered an invalid choice");
                     break;
             }
             
             
 
-            return value1 +   value2;
+            return  value2;
         }
 
-        public static bool IsAnswerAString (string value2)
+        private static bool IsAnswerAStringBoolOrInteger (string value1)
         {
-            bool result= true;
+            bool result = true;
 
+            foreach (var character in value1)
+            {
+                if ((value1 == "true") || (value1 == "yes"))
+                {
+                    result = true;
+                }
+                else if (value1.All(char.IsDigit)){
+                    result = true;
+                }
+                else if (value1.All(Char.IsLetter))
+                    {
+                    result = true;
+                }
+                
+
+
+            }
           
 
             return result;
                
         }
+
+    
+
+        
         //Create an application that takes 2 input values
         // 1st input (any type)
         // 2nd input asks the data type of the inut value.

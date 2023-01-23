@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CsharpMasterClass
 {
     public class Program
@@ -36,12 +37,12 @@ namespace CsharpMasterClass
 
             #region 2 input values program
 
-            Console.WriteLine("Enter a value and I will tell you what type of value it is:");
+            //Console.WriteLine("Enter a value and I will tell you what type of value it is:");
 
-            string answer = Console.ReadLine();
+            //string answer = Console.ReadLine();
 
 
-
+            ForEachLoopsAndSwitch.GetInputValue();
 
 
             #endregion
