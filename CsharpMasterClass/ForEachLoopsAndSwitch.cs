@@ -23,15 +23,15 @@ namespace CsharpMasterClass
             {
                 case "1":
                     IsAnswerAStringBoolOrInteger(value1);
-                    Console.WriteLine("You entered a string");
+                    ReturnType(value1, value2);
                     break;
                 case "2":
                     IsAnswerAStringBoolOrInteger(value1);
-                    Console.WriteLine("You entered an integer");
+                    ReturnType(value1, value2);
                     break;
                 case "3":
                     IsAnswerAStringBoolOrInteger(value1);
-                    Console.WriteLine("You entered a boolean value");
+                    ReturnType(value1, value2);
                     break;
                 default:
                     Console.WriteLine("You entered an invalid choice");
@@ -45,11 +45,12 @@ namespace CsharpMasterClass
 
         private static bool IsAnswerAStringBoolOrInteger (string value1)
         {
-            bool result = true;
+            bool result = false;
+
 
             foreach (var character in value1)
             {
-                if ((value1 == "true") || (value1 == "yes"))
+                if ((value1 == "true") || (value1 == "false") || (value1 == "yes") || (value1=="no"))
                 {
                     result = true;
                 }
@@ -68,6 +69,37 @@ namespace CsharpMasterClass
 
             return result;
                
+        }
+
+        private static string ReturnType(string value1, string value2)
+        {
+            Type valueType = value1.GetType();
+            Type stringValue = typeof(string);
+            int intValue = Int16.Parse(value1);
+ 
+            Type integerVal = intValue.GetType();
+            Type boolValue = typeof(bool);
+
+            if ((valueType == stringValue) && (value2 =="1"))
+                
+            {
+                Console.WriteLine("You entered a string");
+            }
+           else  if ((int.TryParse(value1, out intValue)) && (value2 == "2"))
+            
+            {
+                Console.WriteLine("You entered an integer");
+            }
+
+            else if ((valueType == boolValue  && value2 == "3"))
+            {
+                Console.WriteLine("You entered an boolean");
+            }
+         else if ((valueType !=stringValue) && (valueType != integerVal) && (valueType != boolValue))
+            {
+                Console.WriteLine("You entered the wrong type");
+            }
+            return value1.GetType().ToString();
         }
 
     
